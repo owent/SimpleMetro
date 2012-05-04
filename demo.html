@@ -1,0 +1,89 @@
+﻿<!DOCTYPE html>
+
+<html lang="zh_cn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Metro界面测试</title>
+
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <script type="text/javascript" src="jquery-ui.min.js"></script>
+    <script type="text/javascript" src="SimpleMetro.js"></script>
+
+    <style type="text/css">
+        @import url(metro.default.css);
+    </style>
+    <script type="text/javascript">
+
+    </script>
+</head>
+<body>
+    <div>
+    <h1>按钮:</h1>
+    <input type="button" class="web_button" value="Input按钮[IE]" style="font-size: 24px;" />
+    <a href="javascript:void(0);" class="web_button" style="font-size: 24px;">Span按钮[IE]</a> <br />
+        <br />
+    <input type="button" class="sys_panel sys_button" value="Input按钮[系统]" style="font-size: 24px;" />
+    <a href="javascript:void(0);" class="sys_panel sys_button" style="font-size: 24px;">Span按钮[系统]</a> <br />
+    </div>
+    <hr />
+    <div>
+    <h1>各种框:</h1>
+    <input type="text" class="web_input" value="Input输入框[IE]" style="font-size: 24px;" />
+    <textarea class="web_input" cols="10" rows="10">Textarea输入框[IE]</textarea> <br />
+        <br />
+    <input type="checkbox" class="web_input" value="Checkbox[IE]" />
+    <input type="password" class="web_input" value="Password[IE]" />
+    <input type="radio" class="web_input" value="Radio[IE]" />
+    <select><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+    <input type="number" max="100" min="0" class="web_input" value="50" style="font-size: 24px;" />
+    </div>
+    <hr />
+    <div>
+    <h1>图标:</h1>
+        <div>
+            <span class="sys_panel sys_icon_common sys_icon_add_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_back_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_check_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_close_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_delete_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_download_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_favs_addtorest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_favs_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_feature_emailrest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_next_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_stop_rest"></span>
+            <span class="sys_panel sys_icon_common sys_icon_upload_rest"></span>
+            <a class="sys_panel sys_icon_common sys_icon_feature_settingsrest" href="javascript:void(0);" ></a>
+            <input class="sys_panel sys_icon_common sys_icon_folder_rest" type="button" />
+            <button class="sys_panel sys_icon_common sys_icon_new_rest"></button>
+        </div>
+        <div style="background-color: Black;">
+            <span class="web_panel sys_icon_common sys_icon_add_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_back_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_check_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_close_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_delete_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_download_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_favs_addtorest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_favs_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_feature_emailrest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_next_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_stop_rest web_icon_common sm_common_radius_cir"></span>
+            <span class="web_panel sys_icon_common sys_icon_upload_rest web_icon_common sm_common_radius_cir"></span>
+            <a class="web_panel sys_icon_common sys_icon_feature_settingsrest web_icon_common sm_common_radius_cir" href="javascript:void(0);"></a>
+            <input class="web_panel sys_icon_common sys_icon_folder_rest web_icon_common sm_common_radius_cir" type="button" />
+            <button class="web_panel sys_icon_common sys_icon_new_rest web_icon_common sm_common_radius_cir"></button>
+        </div>
+    </div>
+    <div>
+    <h1>功能:</h1>
+        <textarea id="get_push_message" cols="30" rows="5"></textarea><br />
+        <script type="text/javascript">
+            function DemoPushMessage() {
+                $("<div>" + ($("#get_push_message").val() || $("#get_push_message").html()) + "</div>").pushMessage();
+            }
+        </script>
+        <a href="javascript:DemoPushMessage();">开启推送消息</a><br />
+    </div>
+</body>
+</html>
