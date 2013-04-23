@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="zh_cn" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>瀑布流界面测试</title>
+
+    <!--[if lt IE 9]>
+    <script type="text/javascript">
+				(window.jQuery || document.write('<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"><\/script>'));
+		</script>
+		<![else]-->
+		<script type="text/javascript">
+				(window.jQuery || document.write('<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"><\/script>'));
+		</script>
+		<!--[endif]-->
+    <script type="text/javascript" src="javascripts/SimpleMetro.js"></script>
+    <script type="text/javascript" src="javascripts/SimpleMetro.plugin.min.js"></script>
+
+    <style type="text/css">
+        @import url(stylesheets/metro.default.css);
+
+        .panel {
+            display: inline-block;
+            min-width: 200px;
+            min-height: 345px;
+            background-color: #ff6a00;
+        }
+
+        #container {
+            background-color: #b6ff00;
+            border: 15px solid gray;
+        }
+        
+        #wrapper {
+            width: 100%;
+            min-width: 800px;
+            background-color: #0ff;
+        }
+    </style>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // 自动生成面板
+            var container = $("#container");
+            for (var i = 0; i < 100; ++i) {
+                var ele = $("<div></div>");
+                ele.css({
+                    "height": Math.round(Math.random() * 500) + "px",
+                    "width": Math.round(Math.random() * 500) + "px"
+                }).addClass("panel").html("第" + (i + 1) + "个面板");
+
+                container.append(ele);
+            }
+
+            // 插件调用
+            $("#container").SimpleFliud({
+                // 数值设置
+                panel_width: 220,      // 面板宽度，单位为像素，默认为第一个选择器元素的宽度(默认为选择结果第一个元素的宽度)
+
+                // 选择器设置
+                panel: "div",            // 内部面板选择器(默认为div)
+                wrapper: "#wrapper",     // 包装器选择器，默认为容器选择器
+
+                // 其他设置
+                auto_width: true,         // 自动调整宽度使之填满整个panel(默认为false)
+                action_type: "animation"  // 变换类型,此处设为动画渐变（默认为immediately）
+            });
+            // 其他配置请参考源码注释
+        });
+    </script>
+</head>
+<body>
+    <a href="SimpleMetro.plugin.js">源码</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="SimpleMetro.plugin.min.js">源码.min</a>&nbsp;&nbsp;&nbsp;&nbsp;文档暂缺，可以参考本页和源码注释
+    <div id="wrapper">
+        <div id="container"></div>
+    </div>
+</body>
+</html>
