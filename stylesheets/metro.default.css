@@ -1,0 +1,209 @@
+/* 定义字体 */
+@font-face
+{
+  font-family: SegoeWP;
+  src: url('rs/fonts/SegoeWP.ttf');
+}
+
+@font-face
+{
+  font-family: SegoeWPLight;
+  src: url('rs/fonts/SegoeWP-Light.ttf');
+}
+
+/* ============================ 公共样式区 ============================ */
+/* 公共圆角样式 */
+.sm_common_radius_cir{
+  border-radius: 50%;
+	-moz-border-radius: 50%;
+	-khtml-border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+
+/* 公共阴影样式 */
+.sm_common_shadow_35{
+	box-shadow: 3px 3px 5px #AAA;
+	-moz-box-shadow: 3px 3px 5px #AAA;
+	-khtml-border-shadow: 3px 3px 5px #AAA;
+	-webkit-box-shadow: 3px 3px 5px #AAA;
+}
+
+/* 公共动画效果 */
+.sm_common_transition_23 {
+	-webkit-transition: all .2s ease-in-out;
+	-moz-transition: all .2s ease-in-out;
+	-ms-transition: all .2s ease-in-out;
+	-o-transition: all .2s ease-in-out;
+	transition: all .2s ease-in-out;
+}
+/* ---------------------------- 公共样式区 ---------------------------- */
+
+/* ============================ 系统风格样式区 ============================ */
+/* 系统风格公共项 */
+.sys_panel {
+    font-family: SegoeWP;
+    margin: 0.266666em 0.266666em 0.266666em 0.266666em;
+    background: #3672EC;
+    border: 0.133333em none transparent;
+    color: White;
+    display: inline-block;
+}
+
+.sys_panel:hover {
+    margin: 0.133333em 0.133333em 0.133333em 0.133333em;
+    border: 0.133333em solid Gray;
+}
+
+.sys_panel:active {
+    margin: 0.05641em 0.133333em 0.210256em 0.133333em;
+}
+
+/* 系统风格按钮 */
+.sys_button {
+    margin: 0.133333em 0.133333em 0.133333em 0.133333em;
+    border: 0.133333em solid #3672EC;
+    text-decoration: none;
+}
+.sys_button:hover { 
+    border-color: #1D57B4;
+    background-color: #5A94F1; 
+}
+
+.sys_button:active { 
+    border-color: Black; 
+    background-color: Black; 
+}	
+
+/* 系统风格图标 */
+.sys_icon_common {
+    display: inline-block;
+    min-width: 48px;
+    min-height: 48px;
+    background-image: url("rs/images/icons_sys_dark_48x48.png");
+    background-repeat: no-repeat;
+    background-position: top left;
+    padding: 0;
+    text-decoration: none;
+    font-size: 1em;
+    
+    white-space: normal;
+    -moz-box-sizing: content-box;       /* Firefox3.5+ */ 
+    -webkit-box-sizing: content-box;    /* Safari3.2+ */ 
+    -o-box-sizing: content-box;         /* Opera9.6 */ 
+    -ms-box-sizing: content-box;        /* IE8 */
+    box-sizing: content-box;            /* ISO CSS3 */
+}
+
+.sys_icon_add_rest{ background-position: 0 0; width: 48px; height: 48px; } 
+.sys_icon_back_rest{ background-position: 0 -98px; width: 48px; height: 48px; } 
+.sys_icon_basecircle_rest{ background-position: 0 -196px; width: 48px; height: 48px; } 
+.sys_icon_cancel_rest{ background-position: 0 -294px; width: 48px; height: 48px; } 
+.sys_icon_check_rest{ background-position: 0 -392px; width: 48px; height: 48px; } 
+.sys_icon_close_rest{ background-position: 0 -490px; width: 48px; height: 48px; } 
+.sys_icon_delete_rest{ background-position: 0 -588px; width: 48px; height: 48px; } 
+.sys_icon_download_rest{ background-position: 0 -686px; width: 48px; height: 48px; } 
+.sys_icon_edit_rest{ background-position: 0 -784px; width: 48px; height: 48px; } 
+.sys_icon_favs_addtorest{ background-position: 0 -882px; width: 48px; height: 48px; } 
+.sys_icon_favs_rest{ background-position: 0 -980px; width: 48px; height: 48px; } 
+.sys_icon_feature_camerarest{ background-position: 0 -1078px; width: 48px; height: 48px; } 
+.sys_icon_feature_emailrest{ background-position: 0 -1176px; width: 48px; height: 48px; } 
+.sys_icon_feature_searchrest{ background-position: 0 -1274px; width: 48px; height: 48px; } 
+.sys_icon_feature_settingsrest{ background-position: 0 -1372px; width: 48px; height: 48px; } 
+.sys_icon_feature_videorest{ background-position: 0 -1470px; width: 48px; height: 48px; } 
+.sys_icon_folder_rest{ background-position: 0 -1568px; width: 48px; height: 48px; } 
+.sys_icon_minus_rest{ background-position: 0 -1666px; width: 48px; height: 48px; } 
+.sys_icon_new_rest{ background-position: 0 -1764px; width: 48px; height: 48px; } 
+.sys_icon_next_rest{ background-position: 0 -1862px; width: 48px; height: 48px; } 
+.sys_icon_overflowdots{ background-position: -98px 0; width: 72px; height: 72px; } 
+.sys_icon_questionmark_rest{ background-position: -98px -122px; width: 48px; height: 48px; } 
+.sys_icon_refresh_rest{ background-position: -98px -220px; width: 48px; height: 48px; } 
+.sys_icon_save_rest{ background-position: -98px -318px; width: 48px; height: 48px; } 
+.sys_icon_share_rest{ background-position: -98px -416px; width: 48px; height: 48px; } 
+.sys_icon_stop_rest{ background-position: -98px -514px; width: 48px; height: 48px; } 
+.sys_icon_sync_rest{ background-position: -98px -612px; width: 48px; height: 48px; } 
+.sys_icon_transport_ffrest{ background-position: -98px -710px; width: 48px; height: 48px; } 
+.sys_icon_transport_pauserest{ background-position: -98px -808px; width: 48px; height: 48px; } 
+.sys_icon_transport_playrest{ background-position: -98px -906px; width: 48px; height: 48px; } 
+.sys_icon_transport_rewrest{ background-position: -98px -1004px; width: 48px; height: 48px; } 
+.sys_icon_upload_rest{ background-position: -98px -1102px; width: 48px; height: 48px; }
+
+/* ---------------------------- 系统风格样式区 ---------------------------- */
+
+/* ============================ Web风格样式区 ============================ */
+/* Web 风格按钮 */
+.web_button {
+    font-family: SegoeWP;
+    color: #212121;
+    border: 0.076923em solid Gray;
+    background:  #E6E6E6;
+    text-decoration: none;
+}
+
+.web_button:hover { 
+    border: 0.076923em solid #26A0DA; 
+    background: #A6F4FF; 
+}
+
+.web_button:active { 
+    border: 0.076923em solid #0089B5; 
+    background: #34B4E3; 
+}
+
+/* Web 风格各种框 */
+.web_input {
+    font-family: SegoeWP;
+    border: 0.076923em solid #717171;
+    background: White;
+}
+
+.web_input:hover { 
+    border: 0.076923em solid #28A1DA; 
+}
+
+.web_input:focus { 
+    border: 0.076923em solid #212121; 
+}
+
+/* Web 风格面板 */
+.web_panel {
+    font-family: SegoeWP;
+    margin: 0.133333em 0.133333em 0.133333em 0.133333em;
+    background-color: transparent;
+    border: 0.133333em solid White;
+    color: White;
+    display: inline-block;
+}
+
+.web_panel:hover {
+}
+
+.web_panel:active {
+    
+}
+
+/* Web 风格图标 */
+.web_icon_common:active {
+    background-color: White;
+    background-image: url("rs/images/icons_sys_light_48x48.png");
+}
+
+/* ---------------------------- Web风格样式区 ---------------------------- */
+
+/* ============================ 脚本模板样式区 ============================ */
+div.push_alert_wrapper {
+	position: fixed;
+	right: 0;
+	top: 0;
+	max-width: 480px;
+	overflow: hidden;
+	z-index: 100237;
+}
+
+.push_alert_element {
+	position: relative;
+	min-width: 320px;
+	min-height: 64px;
+	float: right;
+	right: -100%;
+}
+/* ---------------------------- 脚本模板样式区 ---------------------------- */
